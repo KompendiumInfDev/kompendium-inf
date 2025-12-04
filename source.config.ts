@@ -1,3 +1,5 @@
+import rehypeKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
 import {
   defineConfig,
   defineDocs,
@@ -22,6 +24,7 @@ export const docs = defineDocs({
 
 export default defineConfig({
   mdxOptions: {
-    // MDX options
+    remarkPlugins: [remarkMath],
+    rehypePlugins: (v) => [rehypeKatex, ...v],
   },
 });
