@@ -1,23 +1,35 @@
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import './global.css';
 import 'katex/dist/katex.css';
-import { Inter } from 'next/font/google';
+import { IBM_Plex_Sans, Inter, JetBrains_Mono } from 'next/font/google';
 import SearchDialog from '@/components/search';
+import { Banner } from 'fumadocs-ui/components/banner';
+import { Body } from './layout.client';
+import { twMerge } from 'tailwind-merge';
 
-const inter = Inter({
-  subsets: ['latin'],
+const IBMPlex = IBM_Plex_Sans({
+  variable: '--font-sans',
+  subsets: ['latin', 'latin-ext'],
 });
+
+const JBMono = JetBrains_Mono({
+  variable: '--font-mono',
+  subsets: ['latin', 'latin-ext'],
+})
 
 export default function Layout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
+    <html lang="en" className={`${IBMPlex.variable} ${JBMono.variable}`} suppressHydrationWarning>
+      <Body>
         <RootProvider
           search={{
             SearchDialog,
           }}
-        >{children}</RootProvider>
-      </body>
+        >
+          <Banner>UWAGA: Kompendium jest jeszcze we wczesnym etapie przygotowywania.</Banner>
+          {children}
+          </RootProvider>
+      </Body>
     </html>
   );
 }

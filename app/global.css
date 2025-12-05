@@ -1,3 +1,31 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/ocean.css';
 @import 'fumadocs-ui/css/preset.css';
+
+@theme {
+    --color-fd-primary: var(--teoria-color);
+}
+
+.dark {
+    --color-fd-primary: var(--teoria-color);
+}
+
+.programowanie {
+    --color-fd-primary: var(--programowanie-color);
+}
+
+.uzytkowe {
+    --color-fd-primary: var(--uzytkowe-color);
+}
+
+:root {
+    --teoria-color: hsl(210, 80%, 54%);
+    --programowanie-color: hsl(128, 60%, 40%);
+    --uzytkowe-color: hsl(30, 100%, 40%);
+}
+
+.dark {
+    --teoria-color: hsl(210 100% 80%);
+    --programowanie-color: hsl(128, 40%, 60%);
+    --uzytkowe-color: hsl(30, 100%, 76%);
+  }
