@@ -9,7 +9,7 @@
     "types:check": "fumadocs-mdx && tsc --noEmit",
     "postinstall": "fumadocs-mdx",
     "lint": "eslint",
-    "deploy": "next build && gh-pages -d build -t"
+    "deploy": "next build && gh-pages -d out -t --cname kompendium.kapios.dev --nojekyll"
   },
   "dependencies": {
     "@orama/orama": "^3.1.16",
