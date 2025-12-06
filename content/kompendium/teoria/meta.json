@@ -6,6 +6,7 @@
     "defaultOpen":true,
     "pages": [
         "index",
-        "---Systemy Liczbowe---"
+        "---[Binary]Systemy Liczbowe---",
+        "...systemy-liczbowe"
     ]
 }

@@ -1,0 +1,9 @@
+{
+    "title": "Systemy Liczbowe",
+    "icon": "Binary",
+    "defaultOpen":true,
+    "collapsible": false,
+    "pages": [
+        "konwersje"
+    ]
+}

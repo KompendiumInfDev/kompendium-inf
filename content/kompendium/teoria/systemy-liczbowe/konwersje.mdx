@@ -1,0 +1,75 @@
+---
+title: Zamiany Systemów
+description: Przekształcanie liczby z jednego systemu na drugi
+---
+
+
+## Dowolny do dziesiętnego
+
+<Steps>
+<Step>
+    Bierzemy oryginalną liczbę w jakimś systemie, na przykład $$1234_{5}$$
+</Step>
+<Step>
+    Każdą jej cyfrę mnożymy przez bazę systemu ($$5$$) podniesioną do odpowiedniej potęgi
+
+    ```math
+    (1 * 5^3) + (2 * 5^2) + (3 * 5^1) + (4 * 5^0)\\
+    =\\
+    (1 * 125) + (2 * 25) + (3 * 5) + (4 * 1)
+    ```
+</Step>
+
+<Step>
+    Sumujemy wyniki mnożenia
+
+    ```math
+    125 + 50 + 15 + 4 = 194
+    ```
+</Step>
+
+<Step>
+    Wynikiem konwersji jest $$\utilde{194_{10}}$$
+</Step>
+</Steps>
+
+## Dziesiętny do dowolnego
+
+<Steps>
+
+<Step>
+    Bierzemy oryginalną liczbę w systemie dziesiętnym, np. $$54321_{10}$$
+</Step>
+
+<Step>
+    Dzielimy tą liczbę przez bazę systemu, na który chcemy ją zamienić, na przykład $$6$$, i bierzemy resztę z dzielenia.
+
+    ```math
+    54321 \div 6 = 9053\; r\; 3
+    ```
+</Step>
+
+<Step>
+    Kontynuujemy ten proces dla części całkowitej z dzielenia, dopóki część całkowita nie równa się 0.
+
+    ```math
+    \begin {alignat*}{3}
+    \textcolor{grey}{54321 \div 6 = 9053\; r\; 3}\\
+    9053 \div 6 = 1508\; r\; 5\\
+    1508 \div 6 = 251\; r\; 2\\
+    251 \div 6 = 41\; r\; 5\\
+    41 \div 6 = 6\; r\; 5\\
+    6 \div 6 = 1\; r\; 0\\
+    1 \div 6 = 0\; r\; 1
+    \end{alignat*}
+    ```
+</Step>
+
+<Step>
+    Odczytujemy otrzymane reszty z dzielenia **od dołu do góry**. Ta liczba jest naszym wynikiem.
+
+    ```math
+        54321_{10} = \utilde{1055253_6}
+    ```
+</Step>
+</Steps>
