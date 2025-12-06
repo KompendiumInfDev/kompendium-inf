@@ -22,7 +22,7 @@ body:
         - Bzdura (kompletnie nieprawdziwe)
     validations:
       required: true
-  - type: markdown
+  - type: textarea
     attributes:
       label: Opis Błędu
       description: Gdzie dokładnie jest błąd? Na czym polega?
