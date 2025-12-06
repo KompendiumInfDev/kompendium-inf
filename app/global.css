@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import 'fumadocs-ui/css/ocean.css';
+@import 'fumadocs-ui/css/solar.css';
 @import 'fumadocs-ui/css/preset.css';
 
 @theme {
@@ -19,13 +19,13 @@
 }
 
 :root {
-    --teoria-color: hsl(210, 80%, 54%);
+    --teoria-color: hsl(245, 80%, 54%);
     --programowanie-color: hsl(128, 60%, 40%);
     --uzytkowe-color: hsl(30, 100%, 40%);
 }
 
 .dark {
-    --teoria-color: hsl(210 100% 80%);
+    --teoria-color: hsl(235, 100%, 75%);
     --programowanie-color: hsl(128, 40%, 60%);
     --uzytkowe-color: hsl(30, 100%, 76%);
   }
