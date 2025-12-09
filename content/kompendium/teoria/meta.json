@@ -6,7 +6,7 @@
     "defaultOpen":true,
     "pages": [
         "index",
-        "licencja",
+        "../licencja",
         "---[Binary]Systemy Liczbowe---",
         "...systemy-liczbowe"
     ]
