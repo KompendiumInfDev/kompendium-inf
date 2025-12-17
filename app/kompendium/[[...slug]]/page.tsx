@@ -40,6 +40,7 @@ export default async function Page(props: PageProps<'/kompendium/[[...slug]]'>) 
                 />
             </DocsBody>
             <hr className='mt-4'/>
+            <LastEditTime path={page.path} />
         </DocsPage>
     )
 }
