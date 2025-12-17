@@ -7,6 +7,7 @@ import type { Metadata } from 'next'
 import { createRelativeLink } from 'fumadocs-ui/mdx'
 import { NotFound } from '@/components/not-found'
 import { Edit, Flag, Pencil } from 'lucide-react'
+import LastEditTime from '@/components/github-edit-time';
 
 
 
@@ -16,12 +17,6 @@ export default async function Page(props: PageProps<'/kompendium/[[...slug]]'>) 
     if (!page) return <NotFound />
 
     const MDX = page.data.body
-    const lastModifiedTime = await getGithubLastEdit({
-      owner: 'KompendiumInfDev',
-      repo: 'kompendium-inf',
-      // file path in Git
-      path: `content/kompendium/${page.path}`,
-    });
 
     return (
         <DocsPage toc={page.data.toc} full={page.data.full}>
@@ -45,7 +40,7 @@ export default async function Page(props: PageProps<'/kompendium/[[...slug]]'>) 
                 />
             </DocsBody>
             <hr className='mt-4'/>
-            <footer className='text-fd-muted-foreground italic text-sm'>Ostatnia zmiana: {lastModifiedTime!.toLocaleString()}</footer>
+            <LastEditTime path={page.path}/>
         </DocsPage>
     )
 }
