@@ -9,20 +9,7 @@ const config = {
         root: path.resolve('.')
     },
     output: 'export',
-    reactStrictMode: true,
-    headers() {
-        return [
-            {
-                source: '/:path*',
-                headers: [
-                    {
-                        key: 'Strict-Transport-Security',
-                        value: 'max-age=63072000; includeSubDomains; preload'
-                    }
-                ]
-            }
-        ]
-    }
+    reactStrictMode: true
 }
 
 export default withMDX(config)
