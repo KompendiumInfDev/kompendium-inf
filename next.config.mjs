@@ -8,6 +8,7 @@ const config = {
     turbopack: {
         root: path.resolve('.')
     },
+    serverExternalPackages: ['@takumi-rs/image-response'],
     reactStrictMode: true
 }
 
