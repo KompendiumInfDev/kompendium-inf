@@ -8,6 +8,7 @@ import { Body } from './layout.client';
 import { twMerge } from 'tailwind-merge';
 
 const IBMPlex = IBM_Plex_Sans({
+  weight: 'variable',
   variable: '--font-sans',
   subsets: ['latin', 'latin-ext'],
 });
